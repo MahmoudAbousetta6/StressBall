@@ -658,7 +658,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 534790314}
-  condations:
+  Conditions:
   - {fileID: 11400000, guid: d36aa0e369d916a4fbe1cda99d816729, type: 2}
 --- !u!1 &556399508
 GameObject:

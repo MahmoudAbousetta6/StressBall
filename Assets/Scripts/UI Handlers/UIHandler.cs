@@ -4,6 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using System;
+
+/// <summary>
+/// Handles values selections.
+/// Apply values to the dropdown menus on start the game based on the assigned values in antistress ball scriptable object.
+/// Apply new values to the dropdown menus based on antistress ball size selection.
+/// </summary>
 public class UIHandler : MonoBehaviour
 {
     private static UIHandler instance;
@@ -65,10 +71,10 @@ public class UIHandler : MonoBehaviour
     {
         radiusDropdown.ClearOptions();
         List<TMP_Dropdown.OptionData> options = new List<TMP_Dropdown.OptionData>();
-
-        for (float i = CurrentSelectedBall.radiusMinRange; i <= CurrentSelectedBall.radiusMaxRange; i += CurrentSelectedBall.radiusStep)
+        
+        for (float i = CurrentSelectedBall.radiusMinRange; i <= CurrentSelectedBall.radiusMaxRange + 0.05f; i += CurrentSelectedBall.radiusStep)
         {
-            var dataOptions = new TMP_Dropdown.OptionData(i.ToString("#.#"));
+            var dataOptions = new TMP_Dropdown.OptionData(i.ToString("#.##"));
             options.Add(dataOptions);
         }
 

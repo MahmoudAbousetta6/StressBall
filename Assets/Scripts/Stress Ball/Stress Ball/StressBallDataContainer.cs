@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Scriptable object to contain data of each antistress ball.
+/// </summary>
 [CreateAssetMenu(fileName = "Stress Ball Data", menuName = "ScriptableObjects/StressBall/Data", order = 1)]
 public class StressBallDataContainer : ScriptableObject
 {

@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Attached to the antistress ball.
+/// Apply conditions and the selected values to the antistress ball.
+/// </summary>
 public class StressBallHandler : MonoBehaviour
 {
     [SerializeField] private MeshRenderer mesh;
-    [SerializeField] private List<Condation> condations;
+    [SerializeField] private List<Condition> Conditions;
 
     private ColorData color;
     private float radius;
@@ -24,8 +28,8 @@ public class StressBallHandler : MonoBehaviour
 
     private void ApplyConations()
     {
-        for (int i = 0; i < condations.Count; i++)
-            if (condations[i].ApplyCondation(ref radius, ref color.color))
+        for (int i = 0; i < Conditions.Count; i++)
+            if (Conditions[i].ApplyCondition(ref radius, ref color.color))
                 break;
     }
 
